@@ -22,6 +22,28 @@ import java.util.*;
 public class App {
     public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("Give a whole number:");
+        int x = Integer.valueOf(scanner.nextLine());
+        if (x == 0) {
+            System.out.println("ZERO");
+        } else if (x%2 == 1) {
+            System.out.println("ODD");
+        } else if (x%2 == 0) {
+            System.out.println("EVEN");
+        }
+        System.out.println("Give another whole number: (Positive number)");            
+        int total = Integer.valueOf(scanner.nextLine());
+        double result3 = 1.0 * x/total;
+        if (total <= 0) {
+            System.out.println("ERROR");
+        } else {
+            System.out.println(result3);
+        }
+        
+        if (x%x == 0 && x%1 == 0 && x > 0 && x < 100) {
+            System.out.println(x + " is a prime number.");
+        } if (x < 0 || x > 100) {
+            System.out.println("Wrong number!");
+        }
     }
 }
